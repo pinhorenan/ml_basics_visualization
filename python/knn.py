@@ -37,4 +37,4 @@ knn.fit(X,y)
 X,y=readFeatureFile("../data/dataset/testing.csv")
 
 accuracy=knn.score(X,y)
-print("Accuracu:", accuracy)
+print("Accuracy:", accuracy)
