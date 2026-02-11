@@ -1,0 +1,8 @@
+export const DATA_DIR = "../data";
+export const RAW_DIR = DATA_DIR + "/raw";
+export const DATASET_DIR = DATA_DIR + "/dataset";
+export const JSON_DIR = DATASET_DIR + "/json";
+export const IMG_DIR = DATASET_DIR + "/img";
+export const SAMPLES = DATASET_DIR + "/samples.json";
+export const JS_OBJECTS = "../common/js_objects";
+export const SAMPLES_JS = JS_OBJECTS + "/samples.js";
