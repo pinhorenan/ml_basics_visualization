@@ -1,5 +1,5 @@
 import { paths as _paths } from "../common/draw.js";
-import { formatPercent, printProgress } from "../common/utils.js";
+import { printProgress } from "../common/utils.js";
 import {
 	RAW_DIR,
 	JSON_DIR,
@@ -18,12 +18,12 @@ const samples = [];
 let id = 1;
 fileNames.forEach((fn) => {
 	const content = readFileSync(RAW_DIR + "/" + fn);
-	const { session, user, drawings } = JSON.parse(content);
+	const { session, student, drawings } = JSON.parse(content);
 	for (let label in drawings) {
 		samples.push({
 			id,
 			label,
-			user_name: user,
+			user_name: student,
 			user_id: session,
 		});
 
