@@ -14,12 +14,12 @@ function createRow(container, studentName, samples) {
 		const sampleContainer = document.createElement("div");
 		sampleContainer.id = "sample_" + id;
 		sampleContainer.onclick = (evt) => {
-			if(evt.ctrlKey) {
+			if (evt.ctrlKey) {
 				toggleFlaggedSample(sample);
 			} else {
 				handleClick(sample, false);
 			}
-		}
+		};
 		sampleContainer.classList.add("sampleContainer");
 		if (correct) {
 			sampleContainer.style.backgroundColor = "#006";
@@ -73,6 +73,16 @@ function toggleInput() {
 		sketchPad.triggerUpdate();
 	} else {
 		inputContainer.style.display = "none";
+		chart.hideDynamicPoint();
+	}
+}
+
+function toggleOuput() {
+	if (confusionContainer.style.display == "none") {
+		confusionContainer.style.display = "block";
+		sketchPad.triggerUpdate();
+	} else {
+		confusionContainer.style.display = "none";
 		chart.hideDynamicPoint();
 	}
 }
